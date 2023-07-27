@@ -1,0 +1,2 @@
+clientid = hwUzK5PubjezbpH8FsmktxxJ2q_IL9cwLYXlvMFkeW_2sknNhqCXdIFPGhmPjAHK
+token = SRY7bkiOpAIaIm6Uh_fz0xyv3cEpKzph9RTpe6bQ4xVRfnwPdEeoCZ1oTeesYR7a
