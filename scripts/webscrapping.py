@@ -11,13 +11,12 @@ genius.remove_section_headers = True
 genius.skip_non_songs = True
 
 # busca artista 
-artist = genius.search_artist("Gilberto Gil", max_songs=500, sort="title")
+artist = genius.search_artist("Gilberto Gil", sort="title") #, max_songs=50, sort="title")
 
 artist.save_lyrics(overwrite=True, filename='lyrics.json')
 
 with open('lyrics.json', 'r') as file:
     data = json.load(file)
-
 
 # busca musicas do autor e salva em dicionario 
 dict_songs_pos = {}
