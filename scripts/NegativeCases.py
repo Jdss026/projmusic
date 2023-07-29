@@ -31,24 +31,23 @@ len_master = len(master_list)
 dict_songs_neg = {}
 # busca letras de artistas e salva em dicionario
 for i in range(len_master):
-    artist = genius.search_artist(master_list[i], sort="popularity", max_songs=1)
-    # print('1')
+    artist = genius.search_artist(master_list[i], sort="popularity", max_songs=100)
     if artist:
         artist.save_lyrics(overwrite=True, filename='lyrics_neg.json')
 
         with open('lyrics_neg.json', 'r') as file:
             data = json.load(file)
-        # print('2')
+
         # busca musicas do autor e salva em dicionario 
         
         tam_songs = len(artist.songs)
-        # print('3')
+    
         for song in range(tam_songs):
             lyrics = data['songs'][song]['lyrics'] #.split("Lyrics")[song].split("You might also likeEmbed")[0]
             title = data['songs'][song]['title']
-            # print(type(title))
+
             dict_songs_neg[title] = lyrics
-            # print('4')
+
 
 # salva em json
 file = './data/data_music_neg.json'
